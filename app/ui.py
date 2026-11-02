@@ -8,7 +8,8 @@ st.title("🎮 Games Recommender")
 game = st.text_input("Enter a game name")
 
 if st.button("Recommend"):
-    response = requests.get(f"http://127.0.0.1:8000/recommend/{quote(game)}")
+    API_URL = "https://games-recommender-system-g3n2.onrender.com"
+    response = requests.get(f"{API_URL}/recommend/{quote(game)}", timeout=90)
     if response.status_code == 200:
         games = response.json()
         cols = st.columns(5)              
