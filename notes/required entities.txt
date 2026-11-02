@@ -1,0 +1,3 @@
+current players (main page) class: header-thing-number
+tags (main page) class: store-tags
+reviews	(main page) class: header-thing-number, 
